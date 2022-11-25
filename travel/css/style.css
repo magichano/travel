@@ -87,21 +87,39 @@ img{
     height: 90px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     padding: 0 15px;
 }
 
+.logoFull{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+   
+}
+
+.logo{
+    margin-right: 6px;
+}
+
+.__logoText{
+    font-family: 'Magra';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    
+}
 
 .nav{
-    
+margin-bottom: 18px;
 }
 
 .nav-list{
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
-   
 }
 .nav-item{
     margin-top: 20px;
@@ -111,11 +129,16 @@ img{
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
-    
 }
+
 .nav-item:last-child{
     margin-right: 0px;
 }
+
+.nav-itemm{
+    display: none;
+}
+
 .nav-link{
      text-decoration: none;
      font-family: 'Red Hat Text';
@@ -123,6 +146,7 @@ img{
     font-weight: 500;
     color: white;
 }
+
 .nav-link:hover, .nav-link:focus, .nav-link:active{
     opacity: .75;
 }
@@ -133,18 +157,23 @@ img{
     border: 0;
     background: #0D606F;
     border-radius: 10px; 
+    
+
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
-    margin-top: 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
 .__button:hover, .__button:focus, .__button:active{
     background: #033e48;
+}
+
+.menu{
+    display: none;
 }
 /* Header */
 
@@ -198,13 +227,13 @@ img{
     border-radius: 16px;
     border: 0;
     width: 100%;
+
     font-family: 'Aleo';
     font-style: italic;
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
     color: #F2785C;
-    
 }
 
 .__input::placeholder{
@@ -234,8 +263,8 @@ img{
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
-    
 }
+
 .__buttonInput:hover, .__button:focus, .__button:active{
     background: #033e48;
 }
@@ -265,11 +294,11 @@ img{
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
     padding: 0 132px;
-   
-    
 }
 
 .gridFrame{
+    display:flex;
+    flex-direction: column;
    grid-column: span 1;
    justify-self: center;
    align-items: center;
@@ -289,7 +318,7 @@ img{
 }
 
 .__gridImg{
-max-width: 100px;
+
 }
 
 .__textUnderGridImage{
@@ -298,6 +327,7 @@ max-width: 100px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
     
     color: #0D606F;
     margin-bottom: 97px;
@@ -307,21 +337,53 @@ max-width: 100px;
 
 /*POPULAR DESTINATIONS*/
 
+.destinations{
+    font-size: 0;
+}
+.pdImgContainers{
+    font-size: 0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 42px;
+}
+
+.pdImgContainer1{
+    transform: translateX(-64%);
+    margin-right: 20px;
+}
+
+.pdImgContainer2{
+    transform: translateX(-64%);
+    margin-right: 20px;
+}
+
+.pdImgContainer3{
+    transform: translateX(-64%);
+}
+
 .__pdIMG{
     border-radius: 16px;
-    margin-right: 60px;
+    width: 800px;
+    height: 800px;
 }
 
-.pdImgContainers{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
-    width: ;
+.__pdIMG1{
+
 }
 
-.pdImgContainer{
-    display: flex;
-    margin-right : 100px;
+.figcaption{
+    position: absolute;
+    left: 15px;
+    bottom: 40px;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
 }
 
 .threePoints{
@@ -333,8 +395,31 @@ max-width: 100px;
 .threepoints_F{
 
 }
+
 .threePointsImg{
-    margin-bottom: 40px;
+    position: absolute;
+    bottom: 2px;
+    left:47%;
+}
+
+.threePointsImgSmall{
+    position: absolute;
+    display: none;
+}
+
+.arrowSelectRight{
+    display: none;
+}
+
+.arrowSelectLeft{
+    display: none;
+}
+
+.findMoreBtnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 
 .findMoreBtn{
@@ -354,11 +439,9 @@ max-width: 100px;
 
     width: 228px;
     height: 59px;
-    left: 607px;
-    top: 2172px;
+
     border-radius: 10px;
     padding-left: 81px;
-    margin-bottom: 80px;
     border: 0;
 }
 
@@ -374,6 +457,15 @@ max-width: 100px;
 
 .stories{
     
+}
+
+.gridContainer{
+    position: relative;
+    padding: 40px 125px 40px 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    z-index: 2;
 }
 
 .TScontainer{
@@ -396,30 +488,19 @@ max-width: 100px;
     z-index: 1;
 }
 
-.gridContainer{
-    position: relative;
-    padding: 40px 125px 40px 120px;
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
-    row-gap: 30px;
-    z-index: 2;
-}
+.TSimageContainer{
+    grid-column: span 1;
+ }
 
 .TSimage {
     border-radius: 16px;
     filter: drop-shadow(0px 4px 4px #0D606F);
+    height: 250px;
+    object-fit: cover;
 }
 
-.TSimageContainer{
-    grid-column: span 1;
-    display: flex;
-    justify-self: center;
-    align-items: center;
- }
-
  .TStextContainer{
+    margin-left: 40px;
     grid-column: span 2;
  }
 
@@ -440,6 +521,10 @@ max-width: 100px;
     line-height: 24px;
     color: #0D606F;
 
+}
+
+.textMobile{
+    display: none;
 }
 
 .TShref{
@@ -497,10 +582,444 @@ max-width: 100px;
 .footerIMG{
     margin-right: 24.12px;
 }
+
 .footerIMGf{
     margin-right: 0px;
 }
+/*FOOTER*/
 
+
+
+
+/*Media*/
+
+@media screen and (max-width: 414px) {
+
+.__header{ 
+    background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+        box-shadow: 0px 4px 4px rgba(13, 96, 111, 0);
+    }    
+
+
+
+/* First Block*/
+.menu{
+    display: block;
+}
+
+.__logoText{
+    display: none;
+}
+
+.nav{
+    display: block;
+    position: fixed;
+    width: 165px;
+    height: 250px;
+    background: #F2785C;
+    border-radius: 10px;
+    top:0;
+    right:0;
+    transform: translateX(100%);
+    transition: 0.2s;
+    }
+
+.nav_active {
+    transform: translateX(0%);
+}
+
+.cross{
+    margin: 15.5px 0px 13.5px 15.5px;
+} 
+
+.nav-list{
+        display: block;
+        list-style: none;
+    }   
+
+.nav-item{
+        margin-top: 10px;
+        margin-right: 15px;
+        text-align: right;
+        
+    }
+
+.nav-item:first-child{
+        margin-top: 0px;
+    } 
+
+.nav-item:last-child{
+        margin-right: 15px;
+    }     
+
+.nav-itemm{
+    margin-top: 10px;
+     margin-right: 15px;
+    text-align: right;
+   display: block;
+    }
+ 
+.__button{
+        display: none;
+    }    
+
+.preview{
+        background-repeat: no-repeat;
+        background-size: cover; 
+        max-height: 250px;
+        margin-bottom: 0px;
+        padding: 142px 15px 100px 15px;
+        margin-bottom: 20px;
+    }   
+    
+.__textH1, .__textH2{
+        display: none;
+    }    
+
+.__inputAndButton{
+    margin: 0 auto;
+    display: flex;
+    max-width: 360px;
+    height: 48px;
+    position: relative;
+}    
+
+.__input::placeholder{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.__buttonInput{
+    width: 92px;
+    height: 30px;
+    margin-top: 9px;
+    margin-right: 9px;
+
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.__input{
+    padding-left: 16.5px;
+    
+    font-size: 11px;
+    line-height: 15px;
+    color: #F2785C;
+}
+/* First Block*/
+
+
+
+/* 3 STEPS*/
+.h2Container{
+
+}
+
+.gridHeader{
+    font-size: 14px;
+    line-height: 19px;
+
+    margin-bottom: 20px;    
+}
+
+.grid{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+}
+
+.gridFrame{
+    width: 80px;
+}
+
+.gridImgContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+
+.__gridIMG{
+    width: 35px;
+    height: 31.5px;
+}
+
+.__textUnderGridImage{
+    font-size: 10px;
+    line-height: 12px;
+    
+    color: #0D606F;
+    margin-bottom: 0px;
+}
+
+.TUM1{
+    text-align: left;
+}
+
+.TUM2{
+    text-align: center;
+    white-space: nowrap;
+}
+
+.TUM3{
+    text-align: right;
+}
+
+/* 3 STEPS*/
+
+
+
+/* PD*/
+
+.destinations{
+    font-size: 0;
+}
+
+.pdImgContainers{
+    font-size: 0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.pdImgContainer1{
+    transform: translateX(0px);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.pdImgContainer2{
+    transform: translateX(0px); /* 375*/
+    margin-right: 15px;
+}
+
+.pdImgContainer3{
+    transform: translateX(0px);
+    margin-right: 0px;
+}
+
+.__pdIMG{
+    border-radius: 16px;
+    margin-right: 0px;
+    width: 360px;
+    height: 210px;
+    object-fit: cover;
+}
+
+.__pdIMG1{
+
+}
+
+.figcaption{
+    position: absolute;
+    left: 15px;
+    top: 8px;
+
+    font-size: 20px;
+    line-height: 26px;
+    
+}
+
+.threePoints{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threepoints_F{
+
+}
+
+.threePointsImg{
+   display: none;
+}
+
+.threePointsImgSmall{
+    display: block;
+    position: absolute;
+    bottom: 17px;
+    left:45%;
+}
+
+.arrowSelectRight{
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    right:26.5px;
+}
+
+.arrowSelectLeft{
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    left:26.5px;
+}
+
+.findMoreBtnContainer{
+    margin-bottom: 20px;
+}
+
+.findMoreBtn{
+    font-size: 11px;
+    line-height: 15px;
+    
+    background-image: url(../assets/img/svg/arrowSmall.svg);
+    background-position: 12.5px center;
+
+    width: 92px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 25px;
+    border: 0;
+}
+
+.findMoreBtn:hover, .__button:focus, .__button:active{
+    background-image: url(../assets/img/svg/arrowSmall.svg);
+    background-position: 15.5px center;
+}
+/* PD*/
+
+/*TRAVEL STORIES*/
+
+.stories{
+    
+}
+
+.gridContainer{
+    position: relative;
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+    z-index: 2;
+}
+
+.TScontainer{
+    background-image: url(../assets/img/svg/travelstoriesbckgrnd.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.TScontainer::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 90.6%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.TSimageContainer{
+    grid-column: span 1;
+    width: 155px;
+    height: 130px;
+ }
+
+.TSimage {
+    width: 155px;
+    height: 130px;
+}
+
+ .TStextContainer{
+    margin-left: 9px;
+    grid-column: span 2;
+ }
+
+.textH3 {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    
+    
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.h3Utah{
+}
+
+.text{
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.textMobile{
+    display: block;
+}
+
+.textDesktop{
+    display: none;
+}
+
+.TShref{
+    color: #0D606F
+}
+
+.threepoints_F{
+    position: relative;
+    z-index: 2;
+}
+
+.findMoreBtn_F{
+    margin-bottom: 28px;
+}
+/*TRAVEL STORIES*/
 
 /*FOOTER*/
+
+.footer{
+    margin-bottom: 61px;
+}
+
+.__containerFooter{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 0px;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.footerText{
+
+}
+
+.TSgrid1{
+}
+
+.TSgrid2{
+    display: none;
+    justify-self: center;
+}
+
+.TSgrid3{
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
+.footerIMG{
+    margin-right: 21.4px;
+}
+
+.footerIMGf{
+    margin-right: 0px;
+}
+/*FOOTER*/
+}
 /* Main */
