@@ -8,9 +8,66 @@
     <title>Explore the beauty of the World</title>
 </head>
 <body>
+
+<!-- POPUP-->
+
+    <div class="popUpBackground">
+        <div class="popUpLogin">
+           
+                <h1 class="popUpH1Text">Log in to your account</h1>
+
+                <div class="toRemove">
+                    <button id="facebook" class="popUpButton Facebook" onclick="document.location='https://facebook.com'">
+                        <img src="assets/img/svg/facebookLogo.svg" alt="facebookLogo" class="socialLogos">
+                        Sign In with Facebook
+                    </button>
+                    <button class="popUpButton Google" onclick="document.location='https://google.com'">
+                        <img src="assets/img/svg/googleLogo.svg" alt="googleLogo" class="socialLogos">
+                        Sign In with Google
+                    </button>
+
+                    <div class="halfLinesOr">
+                        <img src="assets/img/svg/popUpHalfLine.png" alt="popUpHalfLine" class="popUpHalfLineLeft">
+                        or
+                        <img src="assets/img/svg/popUpHalfLine.png" alt="popUpHalfLine" class="popUpHalfLineRight">
+                    </div>
+                </div>
+                
+
+                <div class="popUpInputs">
+                    <div class="emailTextAndInput">
+                        <p class="emailText">E-mail</p>
+                        <input id="email" type="text" class="emailInput" placeholder="">
+                    </div>
+    
+                    <div class="passwordTextAndInput">
+                        <p class="emailText">Password</p>
+                        <input id="password" type="text" class="emailInput" placeholder="">
+                    </div>
+
+                    <button id="signIn" class="popUpButton signIn">
+                        Sign In
+                    </button>
+                </div>
+
+            
+                    <a id="popUpRefPassword" class ="popUpRef">Forgot Your Password?</a>
+                        
+                    <img src="assets/img/svg/fullLine.svg" alt="Fullline" class="popUpFullline">
+
+                <div class="dontHaveAcc">
+                    <p class="dontHaveAccText">Don’t have an account?&nbsp</p>
+                    <a id="popUpRefAcc" class ="popUpRef">Register</a>
+                </div>
+        </div>
+    </div>
+
+<!-- POPUP-->
+
 <!-- HEADER-->
         <header class="__header" id="header">
             <div class="__container">
+                
                 <div class="__containerHeader">
                 
                     <div class="logofull">
@@ -45,17 +102,11 @@
                         </ul>
                     </nav>
 
-                    <button class="__button">Login</button>
+                    <button id="Login" class="__button">Login</button>
 
                     <div class="menuu">
                         <img src="assets/img/svg/menu.svg" alt="menu" class="menu">
                     </div>
-                  
-
-
-
-    
-                
                 </div>
             </div>
         </header> 
@@ -115,11 +166,12 @@
 <!-- 3 steps to perfect trip-->
 
 <!--POPULAR DESTINATIONS-->
+            <div class="h2Container" id="Destinations">
+                <h2 class="gridHeader">POPULAR DESTINATIONS</h2>  
+            </div>
+
+
             <section class="destinations">
-                <div class="h2Container" id="Destinations">
-                    <h2 class="gridHeader">POPULAR DESTINATIONS</h2>  
-                </div>
-                
                 <div class="pdImgContainers">
                     <figure class="pdImgContainers pdImgContainer1"><img src="assets/img/svg/spain.jpg" alt="spain" class="__pdIMG pdIMG1">
                         <figcaption class="figcaption">SPAIN</figcaption>
@@ -134,7 +186,12 @@
                     </figure>
 
                     <div class="threePoints">
-                        <img src="assets/img/svg/threePoints.svg" alt="threePoints" class="threePointsImg">
+                        <div class="threePointsImg">
+                            <img src="assets/img/svg/Ellipse 1.png" alt="leftpoint" class="leftPoint">
+                            <img src="assets/img/svg/Ellipse 2.png" alt="centerpoint" class="centerPoint">
+                            <img src="assets/img/svg/Ellipse 3.png" alt="rightpoint" class="rightPoint">
+                        </div>
+                        
                         <img src="assets/img/svg/threepointsSMALL.svg" alt="threePointsSMALL" class="threePointsImgSmall">
                         <img src="assets/img/svg/arrowSelectRight.svg" alt="threePointsSMALL" class="arrowSelectRight">
                         <img src="assets/img/svg/arrowSelectLeft.svg" alt="threePointsSMALL" class="arrowSelectLeft">
